@@ -12,10 +12,21 @@ Ex:  hello(null) => null
 
 */
 
-function hello() {
-  // WRITE YOUR CODE UNDER THIS LINE  
+function hello(name) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+      if (name===null) {
+        return null;
+        
+      }
+
+
+return '"' + "HELLO " + name  +"!" + '"'
+
+
+
 
 }
+
 
 
 /* Q2:
@@ -32,11 +43,15 @@ Ex: calculateTax(100,0.15)
 => "You got 100 JD from sales, you should pay 15 JD for tax and you will have 85 JD as net sales."
 */
 
-function calculateTax() {
+function calculateTax(n,a) {
   // WRITE YOUR CODE UNDER THIS LINE 
+    var t = 1;
+    var q = 0;
+   t = n*a;
+   q= n-t 
+  return  ( '"' + "You got " + n + " JD from sales, you should pay "+ t + " JD for tax and you will have " + q + " JD as net sales." + '"')
 
 }
-
 
 /* Q3:
 Using while
@@ -52,9 +67,24 @@ Ex: repeatChar("a",2); => "a, A"
 Ex: repeatChar("C",5); => "C, c, C, c, C"
 */
 
-function repeatChar() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function repeatChar(char1,n) {
+  // WRITE YOUR CODE UNDER THIS LINE  
+  var result = "";
+  while (n>0) {
 
+    
+    if (char1.toLowerCase()===char1) {
+      result = '"' + char1 + ','
+      result = result+ char1.toUpperCase() + ','
+      
+    }
+    else{
+      result = '"' + char1 + ','
+    }
+    
+        n-=1;
+}
+return result = '"' + char1 + ','
 }
 
 
@@ -72,9 +102,16 @@ Ex: stringToCapital("Are you a student in coding ACADEMY by ORANGE ?")
 => "ARE YOU A STUDENT IN CODING ACADEMY BY ORANGE ?"
 */
 
-function stringToCapital() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+ function stringToCapital(s) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+  if (s.length>=0) {
+    return s.toUpperCase();
+  } 
+     
+
+
+    
+  return s + stringToCapital(s)
+
 
 }
-
-// Good luck :)
